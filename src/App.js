@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import Analizer from './Vews/Analyser'
+import Particles from 'react-particles-js';
+import Logo from './logo.png'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Particles className="App-logo"
+              params={{
+            		particles: {
+            			line_linked: {
+            				shadow: {
+            					enable: true,
+            					color: "#3CA9D1",
+            					blur: 8
+            				}
+            			}
+            		}
+            	}}
+              style={{
+                width: '100%',
+                height: '100%',
+                background:'#000'
+              }}
+              />
+              <Analizer />
+              <img src={Logo} alt="Logo" className="logo"/>
+    </>
   );
 }
 
